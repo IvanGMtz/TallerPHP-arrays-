@@ -6,6 +6,7 @@ echo <<<HTML
     HTML;
 
     // print_r(count($planetas));
-    $Numero=array_values($_POST)[0];
-    print_r($planetas[$Numero]);
+    $Cantidad=array_values($_POST)[0];
+    $SistSolar=array_fill(0, $Cantidad, "Deshabilitado"); 
+    print_r($SistSolar);
 ?>

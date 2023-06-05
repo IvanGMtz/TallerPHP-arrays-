@@ -4,8 +4,15 @@
     <br><a href="index.html">Volver</a><br>
     HTML;
 
-    $extraterrestres= array("marciano", "ashtar", "dropa", "gris", "reptiloide");
-    array_push($extraterrestres, $_POST["0"], $_POST["1"], $_POST["2"]);
-    echo "<h3>Especies Alienígenas</h3>";
-    array_unique($extraterrestres);
-    print_r($extraterrestres);
+    $Galaxia= array(
+        array("Sol", "Mercurio", "Venus", "Tierra", "Marte"),
+        array("Marte", "Jupiter", "Saturno", "Urano", "Neptuno"),
+        array("Venus", "Tierra", "Marte", "Jupiter", "Saturno"),
+        array("Sol", "Mercurio", "Saturno", "Urano", "Neptuno")
+    );
+    echo "<h3>Planetas en Común</h3>";
+    echo "<br>";
+    $array1 = $Galaxia[$_POST["SisSolar"]];
+    $array2 = $Galaxia[$_POST["SisSolar2"]];
+    $resultado = array_intersect($array1, $array2);
+    print_r(array_values($resultado));

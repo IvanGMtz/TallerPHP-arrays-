@@ -4,7 +4,8 @@
     <br><a href="index.html">Volver</a><br>
     HTML;
 
-    $planetas= array("Sol", "Mercurio", "Venus", "Tierra", "Marte", "Jupiter", "Saturno", "Urano", "Neptuno");
-
-    echo "<h3>Planeta a explorar</h3>";
-    print_r(array_rand(array_flip($planetas), 1));
+    $extraterrestres= array("marciano", "ashtar", "dropa", "gris", "reptiloide");
+    array_push($extraterrestres, $_POST["0"], $_POST["1"], $_POST["2"]);
+    echo "<h3>Especies Alienígenas</h3>";
+    array_unique($extraterrestres);
+    print_r($extraterrestres);

@@ -14,5 +14,5 @@
     echo "<br>";
     $array1 = $Galaxia[$_POST["SisSolar"]];
     $array2 = $Galaxia[$_POST["SisSolar2"]];
-    $resultado = array_intersect($array1, $array2);
+    $resultado = array_diff($array1, $array2);
     print_r(array_values($resultado));
